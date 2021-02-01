@@ -1,0 +1,68 @@
+{
+  "name": "aws-s3-explorer",
+  "productName": "AWS S3 Explorer",
+  "version": "0.1.0",
+  "description": "Lorem Ipsum",
+  "homepage": "https://github.com/fmmendes/aws-s3-explorer#readme",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [
+    "aws",
+    "s3",
+    "file",
+    "explorer"
+  ],
+  "author": {
+    "name": "Filipe Moraes Mendes",
+    "email": "10069692+fmmendes@users.noreply.github.com"
+  },
+  "license": "AGPL-3.0-only",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "aws_s3_explorer"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "aws-sdk": "^2.834.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "11.2.1",
+    "electron-reloader": "^1.2.0"
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <h1>💖 Hello!</h1>
+  <p>Welcome to your Electron application.</p>
+
+  <div>
+
+    <label for="buckets">Choose a bucket:</label>
+    <select name="buckets" id="buckets" disabled> </select>
+
+    <br />
+
+    <label for="prefix">Choose a prefix</label>
+    <input list="prefixes" type="text" name="prefix" id="prefix">
+
+    <br />
+
+    <button name="load-objects" id="load-objects" disabled>Load</button>
+    
+    <br />
+    
+    <button name="load-content" id="load-content" disabled>Load Prefix Content</button>
+
+  </div>
+
+  <datalist id="prefixes"></datalist>
+
+  <script src="renderer.js"></script>
+</body>
+
+</html>
